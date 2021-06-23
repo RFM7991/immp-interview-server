@@ -17,8 +17,9 @@ router.put('/', async function(req, res) {
   res.send(data);
 });
 
-router.delete('/', async function(req, res) {
-  const data = await sqlite.deleteContact(req.body)
+router.delete('/:contactId', async function(req, res) {
+  const { contactId } = req.params;
+  const data = await sqlite.deleteContact(contactId);
   res.send(data);
 });
 

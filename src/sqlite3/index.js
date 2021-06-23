@@ -63,7 +63,7 @@ const methods = {
     })
   },
 
-  deleteContact: async function({contactId}) {
+  deleteContact: async function(contactId) {
     return new Promise((resolve, reject) => {
       const sql = "DELETE FROM contacts"
       + " WHERE contactID = " + contactId;
